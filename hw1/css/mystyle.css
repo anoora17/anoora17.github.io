@@ -1,0 +1,172 @@
+<style>
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size: 15px/1.5 ;
+    padding: 0px;
+    margin: 0;
+    height:100%;
+    width: 100%;
+
+}
+#img-body{
+  background:url("../img/halftone.png");
+
+}
+header
+  {
+    width:100%;
+    height:75px;
+    background:#d3d3d3;
+    color: #ffffff;
+    border-bottom:#4aaaa5 1px solid;
+  }
+
+
+h1{
+
+  font-size: 20px;
+
+}
+
+
+
+/*
+#myname{
+  width: 200px;
+  margin: 35px;
+  padding: 10 0 10 0;
+  text-align: center;
+  background-color:#4a3aa5
+}   */
+hr {
+width: auto;
+margin-left: auto;
+margin-right: auto;
+
+}
+h2{
+  color:#4aaaa5;
+}
+
+
+.container{
+
+  margin:auto;
+
+  }
+/* Header and Navigation */
+  li{
+    margin:0;
+    padding: 0 20px 0 20px;
+      }
+  header nav{
+    float: right;
+    header
+    a{
+    background:#4aaaa5;
+    display: inline-block;
+    height: 50px;
+    width: 100px;
+    }
+
+  }
+  a:hover{
+   color:#4a6aa5;
+   font-weight: bold;
+   display:inline-block;
+   font-stretch: 22px;
+
+  }
+  header li{
+   float:right;
+   list-style-type: none;
+   padding: 0 20px 0 20px;
+  }
+  nav{
+    font-size: 24px;
+    background:#4aaaa5
+  border-left: 1px solid #4aaaa5;
+    height: 50px;
+  }
+/* section for forms*/
+div section{
+  background: #d3d3d3;
+  height: auto;
+  margin-left: 30px;
+  padding-bottom: auto;
+ border: 1px solid
+  width: 50%;
+}
+
+
+#text-field{
+
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+}
+/*
+#text-field {
+
+  margin-top: 15px;
+  text-align: right;
+}
+#text-field input[type="email"]{
+  padding: 4px;
+  height: 28px;
+  width: 350px
+
+}
+#text-field input[type="text"]{
+  padding: 4px;
+  height: 28px;
+  width: 350px
+
+*/
+
+}
+/*
+#myart {
+  padding: 4px;
+  height: 28px;
+  width: 350px
+
+}*/
+.box{
+  width:40%;
+  margin:auto;
+  overflow: hidden;
+  float: right: auto;
+
+  }
+
+
+#sidebar {
+
+  width: 50%;
+  margin: 10px;
+  padding: 20px;
+  float:left;
+  background: lightblue;
+  position: relative;
+}
+
+
+footer{
+  padding:20px;
+  margin-top: 20px;
+  color:#ffffff;
+  background-color: #d3d3d3;
+  text-align: center;
+  border-top:#4aaaa5 3px solid;
+
+}
+</style>
