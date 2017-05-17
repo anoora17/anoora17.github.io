@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<!-- saved from url=(0174)http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css -->
+<html class="turbolinks-progress-bar" lang="en"><head prefix="og: http://ogp.me/ns#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="object" property="og:type">
+<meta content="GitLab" property="og:site_name">
+<meta content="01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css · master · GW-Coding-Boot-Camp / 05-2017-Class-Repository" property="og:title">
+<meta content="GitLab Community Edition" property="og:description">
+<meta content="http://gw.bootcampcontent.com/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png" property="og:image">
+<meta content="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css" property="og:url">
+<meta content="summary" property="twitter:card">
+<meta content="01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css · master · GW-Coding-Boot-Camp / 05-2017-Class-Repository" property="twitter:title">
+<meta content="GitLab Community Edition" property="twitter:description">
+<meta content="http://gw.bootcampcontent.com/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png" property="twitter:image">
+
+<title>01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css · master · GW-Coding-Boot-Camp / 05-2017-Class-Repository · GitLab</title>
+<meta content="GitLab Community Edition" name="description">
+<link rel="shortcut icon" type="image/x-icon" href="http://gw.bootcampcontent.com/assets/favicon-075eba76312e8421991a0c1f89a89ee81678bcde72319dd3e8047e2a47cd3a42.ico">
+<link rel="stylesheet" media="all" href="./zidex_files/application-d165f12070137b3b436a61f947940b2ced66ac0acb1c4b61ee70daf598ef42ae.css">
+<link rel="stylesheet" media="print" href="./zidex_files/print-68eed6d8135d858318821e790e25da27b2b4b9b8dbb1993fa6765d8e2e3e16ee.css">
+<script src="./zidex_files/application-025f6d7648c857a731cbfd24fefde37e42f1613525a8d15b3b2a591e7df17620.js.download"></script><style>html.turbolinks-progress-bar::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  background-color: #0076ff;
+  height: 3px;
+  opacity: 0.99;
+  width: 0%;
+  transition: width 300ms ease-out, opacity 150ms ease-in;
+  transform: translate3d(0,0,0);
+}</style>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="53CwVf5Qkq3Mhkic59B4dsQ6cJTv0PYJq5X2oEA0QSiqnL7hX79kr9m0fLRdbOJt/cUU/0UoHnRrX+zao8hP7A==">
+<meta content="origin-when-cross-origin" name="referrer">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+<meta content="#474D57" name="theme-color">
+<link rel="apple-touch-icon" type="image/x-icon" href="http://gw.bootcampcontent.com/assets/touch-icon-iphone-5a9cee0e8a51212e70b90c87c12f382c428870c0ff67d1eb034d884b78d2dae7.png">
+<link rel="apple-touch-icon" type="image/x-icon" href="http://gw.bootcampcontent.com/assets/touch-icon-ipad-a6eec6aeb9da138e507593b464fdac213047e49d3093fc30e90d9a995df83ba3.png" sizes="76x76">
+<link rel="apple-touch-icon" type="image/x-icon" href="http://gw.bootcampcontent.com/assets/touch-icon-iphone-retina-72e2aadf86513a56e050e7f0f2355deaa19cc17ed97bbe5147847f2748e5a3e3.png" sizes="120x120">
+<link rel="apple-touch-icon" type="image/x-icon" href="http://gw.bootcampcontent.com/assets/touch-icon-ipad-retina-8ebe416f5313483d9c1bc772b5bbe03ecad52a54eba443e5215a22caed2a16a2.png" sizes="152x152">
+<link color="rgb(226, 67, 41)" href="http://gw.bootcampcontent.com/assets/logo-d36b5212042cebc89b96df4bf6ac24e43db316143e89926c0db839ff694d2de4.svg" rel="mask-icon">
+<meta content="/assets/msapplication-tile-1196ec67452f618d39cdd85e2e3a542f76574c071051ae7effbfde01710eb17d.png" name="msapplication-TileImage">
+<meta content="#30353E" name="msapplication-TileColor">
+
+
+
+
+<style>
+  [data-user-is] {
+    display: none !important;
+  }
+  
+  [data-user-is="103"] {
+    display: block !important;
+  }
+  
+  [data-user-is="103"][data-display="inline"] {
+    display: inline !important;
+  }
+  
+  [data-user-is-not] {
+    display: block !important;
+  }
+  
+  [data-user-is-not][data-display="inline"] {
+    display: inline !important;
+  }
+  
+  [data-user-is-not="103"] {
+    display: none !important;
+  }
+</style>
+
+</head>
+
+<body class="ui_charcoal" data-group="" data-page="projects:blob:show" data-project="05-2017-Class-Repository">
+<script>
+//<![CDATA[
+window.gon={};gon.api_version="v3";gon.default_avatar_url="http:\/\/gw.bootcampcontent.com\/assets\/no_avatar-849f9c04a3a0d0cea2424ae97b27447dc64a7dbfae83c036c45b403392f0e8ba.png";gon.max_file_size=10;gon.relative_url_root="";gon.shortcuts_path="\/help\/shortcuts";gon.user_color_scheme="white";gon.award_menu_url="\/emojis";gon.current_user_id=103;
+//]]>
+</script>
+<script>
+  window.project_uploads_path = "/GW-Coding-Boot-Camp/05-2017-Class-Repository/uploads";
+  window.preview_markdown_path = "/GW-Coding-Boot-Camp/05-2017-Class-Repository/preview_markdown";
+</script>
+
+<header class="navbar navbar-fixed-top navbar-gitlab with-horizontal-nav">
+<div class="container-fluid">
+<div class="header-content">
+<button aria-label="Toggle global navigation" class="side-nav-toggle" type="button">
+<span class="sr-only">Toggle navigation</span>
+<i class="fa fa-bars"></i>
+</button>
+<button class="navbar-toggle" type="button">
+<span class="sr-only">Toggle navigation</span>
+<i class="fa fa-ellipsis-v"></i>
+</button>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="hidden-sm hidden-xs">
+<div class="has-location-badge search search-form">
+<form class="navbar-form" action="http://gw.bootcampcontent.com/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓"><div class="search-input-container">
+<div class="location-badge">This project</div>
+<div class="search-input-wrap">
+<div class="dropdown" data-url="/search/autocomplete">
+<input type="search" name="search" id="search" placeholder="Search" class="search-input dropdown-menu-toggle js-search-dashboard-options disabled" spellcheck="false" tabindex="1" autocomplete="off" data-toggle="dropdown" data-issues-path="http://gw.bootcampcontent.com/dashboard/issues" data-mr-path="http://gw.bootcampcontent.com/dashboard/merge_requests" value="">
+<div class="dropdown-menu dropdown-select">
+<div class="dropdown-content"><ul>
+<li>
+<a class="is-focused dropdown-menu-empty-link">
+Loading...
+</a>
+</li>
+</ul>
+</div><div class="dropdown-loading"><i class="fa fa-spinner fa-spin"></i></div>
+</div>
+<i class="search-icon"></i>
+<i class="clear-icon js-clear-input"></i>
+</div>
+</div>
+</div>
+<input type="hidden" name="group_id" id="group_id" class="js-search-group-options">
+<input type="hidden" name="project_id" id="search_project_id" value="8" class="js-search-project-options" data-project-path="05-2017-Class-Repository" data-name="05-2017-Class-Repository" data-issues-path="/GW-Coding-Boot-Camp/05-2017-Class-Repository/issues" data-mr-path="/GW-Coding-Boot-Camp/05-2017-Class-Repository/merge_requests">
+<input type="hidden" name="search_code" id="search_code" value="true">
+<input type="hidden" name="repository_ref" id="repository_ref" value="master">
+
+<div class="search-autocomplete-opts hide" data-autocomplete-path="/search/autocomplete" data-autocomplete-project-id="8" data-autocomplete-project-ref="master"></div>
+</form></div>
+
+</li>
+<li class="visible-sm visible-xs">
+<a title="Search" aria-label="Search" data-toggle="tooltip" data-placement="bottom" data-container="body" href="http://gw.bootcampcontent.com/search"><i class="fa fa-search"></i>
+</a></li>
+<li>
+<a title="Todos" aria-label="Todos" data-toggle="tooltip" data-placement="bottom" data-container="body" href="http://gw.bootcampcontent.com/dashboard/todos"><i class="fa fa-bell fa-fw"></i>
+<span class="badge hidden todos-pending-count">
+0
+</span>
+</a></li>
+<li>
+<a title="New project" aria-label="New project" data-toggle="tooltip" data-placement="bottom" data-container="body" href="http://gw.bootcampcontent.com/projects/new"><i class="fa fa-plus fa-fw"></i>
+</a></li>
+<li class="header-user dropdown">
+<a class="header-user-dropdown-toggle" data-toggle="dropdown" href="http://gw.bootcampcontent.com/anoora17"><img width="26" height="26" class="header-user-avatar" src="./zidex_files/0d3f073d4df4e04618eaf83734e1e349" alt="0d3f073d4df4e04618eaf83734e1e349?s=52&amp;d=identicon">
+<i class="fa fa-caret-down"></i>
+</a><div class="dropdown-menu-nav dropdown-menu-align-right">
+<ul>
+<li>
+<a class="profile-link" aria-label="Profile" data-user="anoora17" href="http://gw.bootcampcontent.com/anoora17">Profile</a>
+</li>
+<li>
+<a aria-label="Profile Settings" href="http://gw.bootcampcontent.com/profile">Profile Settings</a>
+</li>
+<li class="divider"></li>
+<li>
+<a class="sign-out-link" aria-label="Sign out" rel="nofollow" data-method="delete" href="http://gw.bootcampcontent.com/users/sign_out">Sign out</a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h1 class="title"><a href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp">GW-Coding-Boot-Camp</a> / <a class="project-item-select-holder" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository">05-2017-Class-Repository</a><button name="button" type="button" class="dropdown-toggle-caret js-projects-dropdown-toggle" aria-label="Toggle switch project dropdown" data-target=".js-dropdown-menu-projects" data-toggle="dropdown"><i class="fa fa-chevron-down"></i></button></h1>
+<div class="header-logo">
+<a class="home" title="Dashboard" id="logo" href="http://gw.bootcampcontent.com/"><svg width="36" height="36" class="tanuki-logo">
+  <path class="tanuki-shape tanuki-left-ear" fill="#e24329" d="M2 14l9.38 9v-9l-4-12.28c-.205-.632-1.176-.632-1.38 0z"></path>
+  <path class="tanuki-shape tanuki-right-ear" fill="#e24329" d="M34 14l-9.38 9v-9l4-12.28c.205-.632 1.176-.632 1.38 0z"></path>
+  <path class="tanuki-shape tanuki-nose" fill="#e24329" d="M18,34.38 3,14 33,14 Z"></path>
+  <path class="tanuki-shape tanuki-left-eye" fill="#fc6d26" d="M18,34.38 11.38,14 2,14 6,25Z"></path>
+  <path class="tanuki-shape tanuki-right-eye" fill="#fc6d26" d="M18,34.38 24.62,14 34,14 30,25Z"></path>
+  <path class="tanuki-shape tanuki-left-cheek" fill="#fca326" d="M2 14L.1 20.16c-.18.565 0 1.2.5 1.56l17.42 12.66z"></path>
+  <path class="tanuki-shape tanuki-right-cheek" fill="#fca326" d="M34 14l1.9 6.16c.18.565 0 1.2-.5 1.56L18 34.38z"></path>
+</svg>
+
+</a></div>
+<div class="js-dropdown-menu-projects">
+<div class="dropdown-menu dropdown-select dropdown-menu-projects">
+<div class="dropdown-title"><span>Go to a project</span><button class="dropdown-title-button dropdown-menu-close" aria-label="Close" type="button"><i class="fa fa-times dropdown-menu-close-icon"></i></button></div>
+<div class="dropdown-input"><input type="search" id="" class="dropdown-input-field" placeholder="Search your projects" autocomplete="off" value=""><i class="fa fa-search dropdown-input-search"></i><i role="button" class="fa fa-times dropdown-input-clear js-dropdown-input-clear"></i></div>
+<div class="dropdown-content"></div>
+<div class="dropdown-loading"><i class="fa fa-spinner fa-spin"></i></div>
+</div>
+</div>
+
+</div>
+</div>
+</header>
+
+<script>
+  var findFileURL = "/GW-Coding-Boot-Camp/05-2017-Class-Repository/find_file/master";
+</script>
+
+<div class="page-with-sidebar">
+<div class="sidebar-wrapper nicescroll">
+<div class="sidebar-action-buttons">
+<div class="nav-header-btn toggle-nav-collapse" title="Open/Close">
+<span class="sr-only">Toggle navigation</span>
+<i class="fa fa-bars"></i>
+</div>
+<div class="nav-header-btn pin-nav-btn has-tooltip  js-nav-pin" data-container="body" data-placement="right" title="" data-original-title="Pin navigation">
+<span class="sr-only">Toggle navigation pinning</span>
+<i class="fa fa-fw fa-thumb-tack"></i>
+</div>
+</div>
+<ul class="nav nav-sidebar" tabindex="0" style="overflow: hidden; outline: none;">
+<li class="active home"><a title="Projects" class="dashboard-shortcuts-projects" href="http://gw.bootcampcontent.com/dashboard/projects"><span>
+Projects
+</span>
+</a></li><li class=""><a title="Todos" href="http://gw.bootcampcontent.com/dashboard/todos"><span>
+Todos
+<span class="count">0</span>
+</span>
+</a></li><li class=""><a class="dashboard-shortcuts-activity" title="Activity" href="http://gw.bootcampcontent.com/dashboard/activity"><span>
+Activity
+</span>
+</a></li><li class=""><a title="Groups" href="http://gw.bootcampcontent.com/dashboard/groups"><span>
+Groups
+</span>
+</a></li><li class=""><a title="Milestones" href="http://gw.bootcampcontent.com/dashboard/milestones"><span>
+Milestones
+</span>
+</a></li><li class=""><a title="Issues" class="dashboard-shortcuts-issues" href="http://gw.bootcampcontent.com/dashboard/issues?assignee_id=103"><span>
+Issues
+<span class="count">0</span>
+</span>
+</a></li><li class=""><a title="Merge Requests" class="dashboard-shortcuts-merge_requests" href="http://gw.bootcampcontent.com/dashboard/merge_requests?assignee_id=103"><span>
+Merge Requests
+<span class="count">0</span>
+</span>
+</a></li><li class=""><a title="Snippets" href="http://gw.bootcampcontent.com/dashboard/snippets"><span>
+Snippets
+</span>
+</a></li><li class=""><a title="Help" href="http://gw.bootcampcontent.com/help"><span>
+Help
+</span>
+</a></li><li class=""><a title="Profile Settings" data-placement="bottom" href="http://gw.bootcampcontent.com/profile"><span>
+Profile Settings
+</span>
+</a></li></ul>
+
+<div id="ascrail2000" class="nicescroll-rails nicescroll-rails-vr" style="width: 7px; z-index: 1000; cursor: default; position: absolute; top: 50px; left: 213px; height: 685px; touch-action: none; display: none;"><div class="nicescroll-cursors" style="position: relative; top: 0px; float: right; width: 5px; height: 0px; background-color: rgb(255, 255, 255); border: 1px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px; touch-action: none;"></div></div><div id="ascrail2000-hr" class="nicescroll-rails nicescroll-rails-hr" style="height: 7px; z-index: 1000; top: 728px; left: 0px; position: absolute; cursor: default; display: none;"><div class="nicescroll-cursors" style="position: absolute; top: 0px; height: 5px; width: 0px; background-color: rgb(255, 255, 255); border: 1px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px;"></div></div></div>
+<div class="layout-nav">
+<div class="container-fluid">
+<div class="controls">
+<div class="dropdown project-settings-dropdown">
+<a class="dropdown-new btn btn-default" data-toggle="dropdown" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#" id="project-settings-button">
+<i class="fa fa-cog"></i>
+<i class="fa fa-caret-down"></i>
+</a>
+<ul class="dropdown-menu dropdown-menu-align-right">
+<li class=""><a title="Members" class="team-tab tab" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/project_members"><span>
+Members
+</span>
+</a></li>
+<li class="divider"></li>
+<li>
+<a data-confirm="Are you sure you want to leave the &quot;GW-Coding-Boot-Camp / 05-2017-Class-Repository&quot; project?" title="Leave project" rel="nofollow" data-method="delete" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/project_members/leave">Leave Project
+</a></li>
+</ul>
+</div>
+</div>
+<div class="nav-control scrolling-tabs-container">
+<div class="fade-left">
+<i class="fa fa-angle-left"></i>
+</div>
+<div class="fade-right">
+<i class="fa fa-angle-right"></i>
+</div>
+<ul class="nav-links scrolling-tabs">
+<li class="home"><a title="Project" class="shortcuts-project" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository"><span>
+Project
+</span>
+</a></li><li class=""><a title="Activity" class="shortcuts-project-activity" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/activity"><span>
+Activity
+</span>
+</a></li><li class="active"><a title="Repository" class="shortcuts-tree" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/tree/master"><span>
+Repository
+</span>
+</a></li><li class=""><a title="Pipelines" class="shortcuts-pipelines" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/pipelines"><span>
+Pipelines
+</span>
+</a></li><li class=""><a title="Graphs" class="shortcuts-graphs" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/graphs/master"><span>
+Graphs
+</span>
+</a></li><li class=""><a title="Issues" class="shortcuts-issues" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/issues"><span>
+Issues
+<span class="badge count issue_counter">0</span>
+</span>
+</a></li><li class=""><a title="Merge Requests" class="shortcuts-merge_requests" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/merge_requests"><span>
+Merge Requests
+<span class="badge count merge_counter">0</span>
+</span>
+</a></li><li class=""><a title="Wiki" class="shortcuts-wiki" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/wikis/home"><span>
+Wiki
+</span>
+</a></li><li class=""><a title="Snippets" class="shortcuts-snippets" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/snippets"><span>
+Snippets
+</span>
+</a></li><li class="hidden">
+<a title="Network" class="shortcuts-network" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/network/master">Network
+</a></li>
+<li class="hidden">
+<a class="shortcuts-new-issue" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/issues/new">Create a new issue
+</a></li>
+<li class="hidden">
+<a title="Commits" class="shortcuts-commits" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/commits/master">Commits
+</a></li>
+<li class="hidden">
+<a title="Issue Boards" class="shortcuts-issue-boards" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/boards">Issue Boards</a>
+</li>
+</ul>
+</div>
+
+</div>
+</div>
+<div class="content-wrapper page-with-layout-nav">
+<div class="scrolling-tabs-container sub-nav-scroll">
+<div class="fade-left">
+<i class="fa fa-angle-left"></i>
+</div>
+<div class="fade-right">
+<i class="fa fa-angle-right"></i>
+</div>
+
+<div class="nav-links sub-nav scrolling-tabs">
+<ul class="container-fluid container-limited">
+<li class="active"><a href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/tree/master">Files
+</a></li><li class=""><a href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/commits/master">Commits
+</a></li><li class=""><a href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/network/master">Network
+</a></li><li class=""><a href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/compare?from=master&amp;to=master">Compare
+</a></li><li class=""><a href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/branches">Branches
+</a></li><li class=""><a href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/tags">Tags
+</a></li></ul>
+</div>
+</div>
+
+
+
+<div class="flash-container flash-container-page">
+</div>
+
+
+<div class=" ">
+<div class="content">
+
+<div class="container-fluid container-limited">
+
+<div class="tree-holder" id="tree-holder">
+<div class="nav-block">
+<div class="tree-ref-holder">
+<form class="project-refs-form" action="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/refs/switch" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="destination" id="destination" value="blob">
+<input type="hidden" name="path" id="path" value="01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css">
+<div class="dropdown">
+<button class="dropdown-menu-toggle js-project-refs-dropdown" type="button" data-toggle="dropdown" data-selected="master" data-ref="master" data-refs-url="/GW-Coding-Boot-Camp/05-2017-Class-Repository/refs" data-field-name="ref" data-submit-form-on-click="true"><span class="dropdown-toggle-text ">master</span><i class="fa fa-chevron-down"></i></button>
+<div class="dropdown-menu dropdown-menu-selectable">
+<div class="dropdown-title"><span>Switch branch/tag</span><button class="dropdown-title-button dropdown-menu-close" aria-label="Close" type="button"><i class="fa fa-times dropdown-menu-close-icon"></i></button></div>
+<div class="dropdown-input"><input type="search" id="" class="dropdown-input-field" placeholder="Search branches and tags" autocomplete="off" value=""><i class="fa fa-search dropdown-input-search"></i><i role="button" class="fa fa-times dropdown-input-clear js-dropdown-input-clear"></i></div>
+<div class="dropdown-content"></div>
+<div class="dropdown-loading"><i class="fa fa-spinner fa-spin"></i></div>
+</div>
+</div>
+</form>
+</div>
+<ul class="breadcrumb repo-breadcrumb">
+<li>
+<a href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/tree/master">05-2017-Class-Repository
+</a></li>
+<li>
+<a href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/tree/master/01-html-css-three-days">01-html-css-three-days</a>
+</li>
+<li>
+<a href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/tree/master/01-html-css-three-days/1-Class-Content">1-Class-Content</a>
+</li>
+<li>
+<a href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/tree/master/01-html-css-three-days/1-Class-Content/1.3">1.3</a>
+</li>
+<li>
+<a href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/tree/master/01-html-css-three-days/1-Class-Content/1.3/Activities">Activities</a>
+</li>
+<li>
+<a href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/tree/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout">4-CSS_PositionedLayout</a>
+</li>
+<li>
+<a href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css"><strong>
+zindex.css
+</strong>
+</a></li>
+</ul>
+</div>
+<ul class="blob-commit-info hidden-xs">
+<li class="commit js-toggle-container" id="commit-b911bd98">
+<a href="mailto:rtirserio@remedyhealthmedia.com"><img class="avatar has-tooltip s36 hidden-xs" alt="Rob Tirserio&#39;s avatar" title="Rob Tirserio" data-container="body" src="./zidex_files/1e227d62ef9e9002136603aa5ff7a2e9"></a>
+<div class="commit-info-block">
+<div class="commit-row-title">
+<span class="item-title">
+<a class="commit-row-message" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/commit/b911bd98f63fb2f2866b261075a0cce36ace3d9c">1.3 activities</a>
+<span class="commit-row-message visible-xs-inline">
+·
+b911bd98
+</span>
+</span>
+<div class="commit-actions hidden-xs">
+<button class="btn btn-clipboard btn-transparent" data-toggle="tooltip" data-placement="bottom" data-container="body" data-clipboard-text="b911bd98f63fb2f2866b261075a0cce36ace3d9c" type="button" title="Copy to Clipboard"><i class="fa fa-clipboard"></i></button>
+<a class="commit-short-id btn btn-transparent" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/commit/b911bd98f63fb2f2866b261075a0cce36ace3d9c">b911bd98</a>
+
+</div>
+</div>
+<div class="commit-row-info">
+<a class="commit-author-link has-tooltip" title="rtirserio@remedyhealthmedia.com" href="mailto:rtirserio@remedyhealthmedia.com">Rob Tirserio</a>
+authored
+<time class="js-timeago" datetime="2017-05-06T13:30:39Z" title="" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="May 6, 2017 9:30am EDT">about 4 hours ago</time><script>
+//<![CDATA[
+$('.js-timeago-pending').removeClass('js-timeago-pending').timeago()
+//]]>
+</script>
+</div>
+</div>
+</li>
+
+</ul>
+<div class="blob-content-holder" id="blob-content-holder">
+<article class="file-holder">
+<div class="file-title">
+<i class="fa fa-file-text-o fa-fw"></i>
+<strong>
+zindex.css
+</strong>
+<small>
+526 Bytes
+</small>
+<div class="file-actions hidden-xs">
+<div class="btn-group tree-btn-group">
+<a class="btn btn-sm" target="_blank" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/raw/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css">Raw</a>
+<a class="btn btn-sm" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blame/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css">Blame</a>
+<a class="btn btn-sm" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/commits/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css">History</a>
+<a class="btn btn-sm" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/3d8452872ae796b52a12dade7f56336ffaa85168/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css">Permalink</a>
+</div>
+<div class="btn-group" role="group">
+<a class="btn btn-sm" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/edit/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css">Edit</a>
+<button name="button" type="submit" class="btn btn-default" data-target="#modal-upload-blob" data-toggle="modal">Replace</button>
+<button name="button" type="submit" class="btn btn-remove" data-target="#modal-remove-blob" data-toggle="modal">Delete</button>
+</div>
+
+</div>
+</div>
+<div class="file-content code js-syntax-highlight white">
+<div class="line-numbers">
+<a class="diff-line-num" data-line-number="1" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L1" id="L1">
+<i class="fa fa-link"></i>
+1
+</a>
+<a class="diff-line-num" data-line-number="2" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L2" id="L2">
+<i class="fa fa-link"></i>
+2
+</a>
+<a class="diff-line-num" data-line-number="3" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L3" id="L3">
+<i class="fa fa-link"></i>
+3
+</a>
+<a class="diff-line-num" data-line-number="4" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L4" id="L4">
+<i class="fa fa-link"></i>
+4
+</a>
+<a class="diff-line-num" data-line-number="5" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L5" id="L5">
+<i class="fa fa-link"></i>
+5
+</a>
+<a class="diff-line-num" data-line-number="6" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L6" id="L6">
+<i class="fa fa-link"></i>
+6
+</a>
+<a class="diff-line-num" data-line-number="7" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L7" id="L7">
+<i class="fa fa-link"></i>
+7
+</a>
+<a class="diff-line-num" data-line-number="8" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L8" id="L8">
+<i class="fa fa-link"></i>
+8
+</a>
+<a class="diff-line-num" data-line-number="9" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L9" id="L9">
+<i class="fa fa-link"></i>
+9
+</a>
+<a class="diff-line-num" data-line-number="10" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L10" id="L10">
+<i class="fa fa-link"></i>
+10
+</a>
+<a class="diff-line-num" data-line-number="11" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L11" id="L11">
+<i class="fa fa-link"></i>
+11
+</a>
+<a class="diff-line-num" data-line-number="12" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L12" id="L12">
+<i class="fa fa-link"></i>
+12
+</a>
+<a class="diff-line-num" data-line-number="13" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L13" id="L13">
+<i class="fa fa-link"></i>
+13
+</a>
+<a class="diff-line-num" data-line-number="14" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L14" id="L14">
+<i class="fa fa-link"></i>
+14
+</a>
+<a class="diff-line-num" data-line-number="15" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L15" id="L15">
+<i class="fa fa-link"></i>
+15
+</a>
+<a class="diff-line-num" data-line-number="16" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L16" id="L16">
+<i class="fa fa-link"></i>
+16
+</a>
+<a class="diff-line-num" data-line-number="17" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L17" id="L17">
+<i class="fa fa-link"></i>
+17
+</a>
+<a class="diff-line-num" data-line-number="18" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L18" id="L18">
+<i class="fa fa-link"></i>
+18
+</a>
+<a class="diff-line-num" data-line-number="19" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L19" id="L19">
+<i class="fa fa-link"></i>
+19
+</a>
+<a class="diff-line-num" data-line-number="20" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L20" id="L20">
+<i class="fa fa-link"></i>
+20
+</a>
+<a class="diff-line-num" data-line-number="21" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L21" id="L21">
+<i class="fa fa-link"></i>
+21
+</a>
+<a class="diff-line-num" data-line-number="22" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L22" id="L22">
+<i class="fa fa-link"></i>
+22
+</a>
+<a class="diff-line-num" data-line-number="23" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L23" id="L23">
+<i class="fa fa-link"></i>
+23
+</a>
+<a class="diff-line-num" data-line-number="24" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L24" id="L24">
+<i class="fa fa-link"></i>
+24
+</a>
+<a class="diff-line-num" data-line-number="25" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L25" id="L25">
+<i class="fa fa-link"></i>
+25
+</a>
+<a class="diff-line-num" data-line-number="26" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L26" id="L26">
+<i class="fa fa-link"></i>
+26
+</a>
+<a class="diff-line-num" data-line-number="27" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L27" id="L27">
+<i class="fa fa-link"></i>
+27
+</a>
+<a class="diff-line-num" data-line-number="28" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L28" id="L28">
+<i class="fa fa-link"></i>
+28
+</a>
+<a class="diff-line-num" data-line-number="29" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L29" id="L29">
+<i class="fa fa-link"></i>
+29
+</a>
+<a class="diff-line-num" data-line-number="30" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L30" id="L30">
+<i class="fa fa-link"></i>
+30
+</a>
+<a class="diff-line-num" data-line-number="31" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L31" id="L31">
+<i class="fa fa-link"></i>
+31
+</a>
+<a class="diff-line-num" data-line-number="32" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L32" id="L32">
+<i class="fa fa-link"></i>
+32
+</a>
+<a class="diff-line-num" data-line-number="33" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L33" id="L33">
+<i class="fa fa-link"></i>
+33
+</a>
+<a class="diff-line-num" data-line-number="34" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L34" id="L34">
+<i class="fa fa-link"></i>
+34
+</a>
+<a class="diff-line-num" data-line-number="35" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L35" id="L35">
+<i class="fa fa-link"></i>
+35
+</a>
+<a class="diff-line-num" data-line-number="36" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L36" id="L36">
+<i class="fa fa-link"></i>
+36
+</a>
+<a class="diff-line-num" data-line-number="37" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L37" id="L37">
+<i class="fa fa-link"></i>
+37
+</a>
+<a class="diff-line-num" data-line-number="38" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L38" id="L38">
+<i class="fa fa-link"></i>
+38
+</a>
+<a class="diff-line-num" data-line-number="39" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L39" id="L39">
+<i class="fa fa-link"></i>
+39
+</a>
+<a class="diff-line-num" data-line-number="40" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L40" id="L40">
+<i class="fa fa-link"></i>
+40
+</a>
+<a class="diff-line-num" data-line-number="41" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#L41" id="L41">
+<i class="fa fa-link"></i>
+41
+</a>
+</div>
+<div class="blob-content" data-blob-id="4d4f94353442eb8ede312640fa3186c349902fc5">
+<pre class="code highlight"><code><span id="LC1" class="line"><span class="c">/**</span></span>
+<span id="LC2" class="line"><span class="c"> * Z-Index: let's us position elements on top of each other (the z-axis controls depth position)</span></span>
+<span id="LC3" class="line"><span class="c"> **/</span></span>
+<span id="LC4" class="line"></span>
+<span id="LC5" class="line"><span class="nc">.box-set</span> <span class="p">{</span></span>
+<span id="LC6" class="line">  <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span></span>
+<span id="LC7" class="line">  <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span></span>
+<span id="LC8" class="line">  <span class="nl">height</span><span class="p">:</span> <span class="m">400px</span><span class="p">;</span></span>
+<span id="LC9" class="line">  <span class="nl">background</span><span class="p">:</span> <span class="no">darkgray</span><span class="p">;</span></span>
+<span id="LC10" class="line"><span class="p">}</span></span>
+<span id="LC11" class="line"></span>
+<span id="LC12" class="line"><span class="nc">.box</span> <span class="p">{</span></span>
+<span id="LC13" class="line">  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span></span>
+<span id="LC14" class="line">  <span class="nl">width</span><span class="p">:</span> <span class="m">150px</span><span class="p">;</span></span>
+<span id="LC15" class="line">  <span class="nl">height</span><span class="p">:</span> <span class="m">150px</span><span class="p">;</span></span>
+<span id="LC16" class="line">  <span class="nl">background</span><span class="p">:</span> <span class="m">#2db34a</span><span class="p">;</span></span>
+<span id="LC17" class="line">  <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span></span>
+<span id="LC18" class="line"><span class="p">}</span></span>
+<span id="LC19" class="line"></span>
+<span id="LC20" class="line"><span class="nc">.box-1</span> <span class="p">{</span></span>
+<span id="LC21" class="line">  <span class="nl">top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span></span>
+<span id="LC22" class="line">  <span class="nl">left</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span></span>
+<span id="LC23" class="line"><span class="p">}</span></span>
+<span id="LC24" class="line"></span>
+<span id="LC25" class="line"><span class="nc">.box-2</span> <span class="p">{</span></span>
+<span id="LC26" class="line">  <span class="nl">bottom</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span></span>
+<span id="LC27" class="line">  <span class="nl">left</span><span class="p">:</span> <span class="m">70px</span><span class="p">;</span></span>
+<span id="LC28" class="line">  <span class="nl">z-index</span><span class="p">:</span> <span class="m">3</span><span class="p">;</span></span>
+<span id="LC29" class="line"><span class="p">}</span></span>
+<span id="LC30" class="line"></span>
+<span id="LC31" class="line"><span class="nc">.box-3</span> <span class="p">{</span></span>
+<span id="LC32" class="line">  <span class="nl">top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span></span>
+<span id="LC33" class="line">  <span class="nl">left</span><span class="p">:</span> <span class="m">130px</span><span class="p">;</span></span>
+<span id="LC34" class="line">  <span class="nl">z-index</span><span class="p">:</span> <span class="m">2</span><span class="p">;</span></span>
+<span id="LC35" class="line"><span class="p">}</span></span>
+<span id="LC36" class="line"></span>
+<span id="LC37" class="line"><span class="nc">.box-4</span> <span class="p">{</span></span>
+<span id="LC38" class="line">  <span class="nl">bottom</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span></span>
+<span id="LC39" class="line">  <span class="nl">left</span><span class="p">:</span> <span class="m">190px</span><span class="p">;</span></span>
+<span id="LC40" class="line">  <span class="nl">z-index</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span></span>
+<span id="LC41" class="line"><span class="p">}</span></span></code></pre>
+</div>
+</div>
+
+
+</article>
+</div>
+
+</div>
+<div class="modal" id="modal-remove-blob">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<a class="close" data-dismiss="modal" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#">×</a>
+<h3 class="page-title">Delete zindex.css</h3>
+</div>
+<div class="modal-body">
+<form class="form-horizontal js-replace-blob-form js-quick-submit js-requires-input" action="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="delete"><input type="hidden" name="authenticity_token" value="53CwVf5Qkq3Mhkic59B4dsQ6cJTv0PYJq5X2oEA0QSiqnL7hX79kr9m0fLRdbOJt/cUU/0UoHnRrX+zao8hP7A=="><div class="form-group commit_message-group">
+<label class="control-label" for="commit_message-d3ad14ee5db8b7dccfdcaee0af2fca26">Commit message
+</label><div class="col-sm-10">
+<div class="commit-message-container">
+<div class="max-width-marker"></div>
+<textarea name="commit_message" id="commit_message-d3ad14ee5db8b7dccfdcaee0af2fca26" class="form-control js-commit-message" placeholder="Delete zindex.css" required="required" rows="3">Delete zindex.css</textarea>
+</div>
+</div>
+</div>
+
+<div class="form-group branch">
+<label class="control-label" for="target_branch">Target branch</label>
+<div class="col-sm-10">
+<input type="text" name="target_branch" id="target_branch" value="patch-1" required="required" class="form-control js-target-branch">
+<div class="js-create-merge-request-container">
+<div class="checkbox">
+<label for="create_merge_request-c3b8fd337a8b010f9c2b4c61a82abedf"><input type="checkbox" name="create_merge_request" id="create_merge_request-c3b8fd337a8b010f9c2b4c61a82abedf" value="1" class="js-create-merge-request" checked="checked">
+Start a <strong>new merge request</strong> with these changes
+</label></div>
+</div>
+</div>
+</div>
+<input type="hidden" name="original_branch" id="original_branch" value="master" class="js-original-branch">
+
+<div class="form-group">
+<div class="col-sm-offset-2 col-sm-10">
+<button name="button" type="submit" class="btn btn-remove btn-remove-file">Delete file</button>
+<a class="btn btn-cancel" data-dismiss="modal" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#">Cancel</a>
+</div>
+</div>
+</form></div>
+</div>
+</div>
+</div>
+<script>
+  new NewCommitForm($('.js-replace-blob-form'))
+</script>
+
+<div class="modal" id="modal-upload-blob">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<a class="close" data-dismiss="modal" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#">×</a>
+<h3 class="page-title">Replace zindex.css</h3>
+</div>
+<div class="modal-body">
+<form class="js-quick-submit js-upload-blob-form form-horizontal" action="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/update/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="put"><input type="hidden" name="authenticity_token" value="53CwVf5Qkq3Mhkic59B4dsQ6cJTv0PYJq5X2oEA0QSiqnL7hX79kr9m0fLRdbOJt/cUU/0UoHnRrX+zao8hP7A=="><div class="dropzone dz-clickable">
+<div class="dropzone-previews blob-upload-dropzone-previews">
+<p class="dz-message light">
+Attach a file by drag &amp; drop or
+<a class="markdown-selector" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#">click to upload</a>
+</p>
+</div>
+</div>
+<br>
+<div class="alert alert-danger data dropzone-alerts" style="display:none"></div>
+<div class="form-group commit_message-group">
+<label class="control-label" for="commit_message-9eced082447d0b426b265857e8cb23cb">Commit message
+</label><div class="col-sm-10">
+<div class="commit-message-container">
+<div class="max-width-marker"></div>
+<textarea name="commit_message" id="commit_message-9eced082447d0b426b265857e8cb23cb" class="form-control js-commit-message" placeholder="Replace zindex.css" required="required" rows="3">Replace zindex.css</textarea>
+</div>
+</div>
+</div>
+
+<div class="form-group branch">
+<label class="control-label" for="target_branch">Target branch</label>
+<div class="col-sm-10">
+<input type="text" name="target_branch" id="target_branch" value="patch-1" required="required" class="form-control js-target-branch">
+<div class="js-create-merge-request-container">
+<div class="checkbox">
+<label for="create_merge_request-9c11da70ca08d992b8560edcc3091c7d"><input type="checkbox" name="create_merge_request" id="create_merge_request-9c11da70ca08d992b8560edcc3091c7d" value="1" class="js-create-merge-request" checked="checked">
+Start a <strong>new merge request</strong> with these changes
+</label></div>
+</div>
+</div>
+</div>
+<input type="hidden" name="original_branch" id="original_branch" value="master" class="js-original-branch">
+
+<div class="form-actions">
+<button name="button" type="submit" class="btn btn-small btn-create btn-upload-file" id="submit-all">Replace file</button>
+<a class="btn btn-cancel" data-dismiss="modal" href="http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/05-2017-Class-Repository/blob/master/01-html-css-three-days/1-Class-Content/1.3/Activities/4-CSS_PositionedLayout/zindex.css#">Cancel</a>
+</div>
+</form></div>
+</div>
+</div>
+</div>
+<script>
+  disableButtonIfEmptyField($('.js-upload-blob-form').find('.js-commit-message'), '.btn-upload-file');
+  new BlobFileDropzone($('.js-upload-blob-form'), 'put');
+  new NewCommitForm($('.js-upload-blob-form'))
+</script>
+
+</div>
+
+</div>
+</div>
+</div>
+</div><input type="file" class="dz-hidden-input" style="visibility: hidden; position: absolute; top: 0px; left: 0px; height: 0px; width: 0px;">
+
+
+
+
+
+
+<div class="device-xs visible-xs"></div><div class="device-sm visible-sm"></div><div class="device-md visible-md"></div><div class="device-lg visible-lg"></div></body></html>
