@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- set the width of data-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <script src="./script/myjs.js " ></script -->>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="./css/mycss.css">
+	<title>N1|first game</title>
+
+</head>
+<body>
+
+<h1> Press any key to start</h1>
+
+<script>
+Modernizr.load({
+	load: ['./script/jquery-1.7.min.js', './script/hangman.js'],
+	complete: function() {
+		init();
+	}
+});
+</script>
+
+
+
+<script>
+// Draw the canvas
+// function drawCanvas() {
+//     var c = canvas.getContext('2d');
+//     // reset the canvas and set basic styles
+//     canvas.width = canvas.width;
+//     c.lineWidth = 10;
+//     c.strokeStyle = 'green';
+//     c.font = 'bold 24px Optimer, Arial, Helvetica, sans-serif';
+//     c.fillStyle = 'red';
+//     // draw the ground
+//     drawLine(c, [20,190], [180,190]);
+//     // start building the gallows if there's been a bad guess
+//     if (badGuesses > 0) {
+//         // create the upright
+//         c.strokeStyle = '#A52A2A';
+//         drawLine(c, [30,185], [30,10]);
+//         if (badGuesses > 1) {
+//             // create the arm of the gallows
+//             c.lineTo(150,10);
+//             c.stroke();
+//         }
+//         if (badGuesses > 2) {
+//             c.strokeStyle = 'black';
+//             c.lineWidth = 3;
+//             // draw rope
+//             drawLine(c, [145,15], [145,30]);
+//             // draw head
+//             c.beginPath();
+//             c.moveTo(160, 45);
+//             c.arc(145, 45, 15, 0, (Math.PI/180)*360);
+//             c.stroke(); 
+//         }
+//         if (badGuesses > 3) {
+//             // draw body
+//             drawLine(c, [145,60], [145,130]);
+//         }
+//         if (badGuesses > 4) {
+//             // draw left arm
+//             drawLine(c, [145,80], [110,90]);
+//         }
+//         if (badGuesses > 5) {
+//             // draw right arm
+//             drawLine(c, [145,80], [180,90]);
+//         }
+//         if (badGuesses > 6) {
+//             // draw left leg
+//             drawLine(c, [145,130], [130,170]);
+//         }
+//         if (badGuesses > 7) {
+//             // draw right leg and end game
+//             drawLine(c, [145,130], [160,170]);
+//             c.fillText('Game over', 45, 110);
+//             // remove the alphabet pad
+//             letters.innerHTML = '';
+//             // display the correct answer
+//             // need to use setTimeout to prevent race condition
+//             setTimeout(showResult, 200);
+//             // increase score of lost games
+//             // display the score after two seconds
+//             // code to be added later
+//         }
+//     }
+//     // if the word has been guessed correctly, display message,
+//     // update score of games won, and then show score after 2 seconds
+//     if (correctGuesses == wordLength) {
+//         letters.innerHTML = '';
+//         c.fillText('You won!', 45,110);
+//         // increase score of won games
+//         // display score
+//         // code to be added later
+//     }
+// }
+
+// When the game is over, display missing letters in red
+function showResult() {
+    var placeholders = word.innerHTML;
+    placeholders = placeholders.split('');
+    for (i = 0; i < wordLength; i++) {
+        if (placeholders[i] == '_') {
+        placeholders[i] = '<span style="color:red">' + wordToGuess.charAt(i).toUpperCase() + '</span>';
+        }
+    }
+    word.innerHTML = placeholders.join('');
+}
+
+
+///
+
+
+
+
+
+
+/ Global variables
+var canvas = document.getElementById('stage'),
+  word = document.getElementById('word'),
+  letters = document.getElementById('letters'),
+  wordToGuess,
+  wordLength,
+  badGuesses,
+  correctGuesses;
+
+function init() {
+  var helptext = $('#helptext'),
+    w = screen.availWidth <= 800 ? screen.availWidth : 800;
+  
+  // Hide the loading message and display the control buttons
+  $('#loading').hide();
+  $('#play').css('display', 'inline-block').click(newGame);
+  $('#clear').css('display', 'inline-block').click(resetScore);
+  $('#help').click(function(e) {
+    $('body').append('<div id="mask"></div>');
+        helptext.show().css('margin-left', (w-300)/2 + 'px');
+    });
+  $('#close').click(function(e) {
+    $('#mask').remove();
+        helptext.hide();
+    });
+  
+  // Rescale the canvas if the screen is wider than 700px
+  if (screen.innerWidth >= 700) {
+    canvas.getContext('2d').scale(1.5, 1.5);
+  }
+}
+
+function newGame() {
+  var placeholders = '',
+    frag = document.createDocumentFragment(),
+    abc = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+  badGuesses = 0;
+  correctGuesses = 0;
+  wordToGuess = getWord();
+  wordLength = wordToGuess.length;
+  // create row of underscores the same length as letters to guess
+  for (var i = 0; i < wordLength; i++) {
+    placeholders += '_';
+  }
+  word.innerHTML = placeholders;
+  // create an alphabet pad to select letters
+  letters.innerHTML = '';
+  for (i = 0; i < 26; i++) {
+    var div = document.createElement('div');
+    div.style.cursor = 'pointer';
+    div.innerHTML = abc[i];
+    div.onclick = getLetter;
+    frag.appendChild(div);
+  }
+  letters.appendChild(frag);
+}
+
+// Get selected letter and remove it from the alphabet pad
+function getLetter() {
+  checkLetter(this.innerHTML);
+  this.innerHTML = '&nbsp;';
+  this.style.cursor = 'default';
+  this.onclick = null;
+}
+
+// Check whether selected letter is in the word to be guessed
+function checkLetter(letter) {
+  
+}
+
+function resetScore() {
+  alert('Score has been reset');
+}
+
+// Select random word to guess
+function getWord() {
+  var a = new Array('abate','aberrant','abscond','accolade','acerbic','acumen','adulation','adulterate','aesthetic','aggrandize','alacrity','alchemy','amalgamate','ameliorate','amenable','anachronism','anomaly','approbation','archaic','arduous','ascetic','assuage','astringent','audacious','austere','avarice','aver','axiom','bolster','bombast','bombastic','bucolic','burgeon','cacophony','canon','canonical','capricious','castigation','catalyst','caustic','censure','chary','chicanery','cogent','complaisance','connoisseur','contentious','contrite','convention','convoluted','credulous','culpable','cynicism','dearth','decorum','demur','derision','desiccate','diatribe','didactic','dilettante','disabuse','discordant','discretion','disinterested','disparage','disparate','dissemble','divulge','dogmatic','ebullience','eccentric','eclectic','effrontery','elegy','eloquent','emollient','empirical','endemic','enervate','enigmatic','ennui','ephemeral','equivocate','erudite','esoteric','eulogy','evanescent','exacerbate','exculpate','exigent','exonerate','extemporaneous','facetious','fallacy','fawn','fervent','filibuster','flout','fortuitous','fulminate','furtive','garrulous','germane','glib','grandiloquence','gregarious','hackneyed','halcyon','harangue','hedonism','hegemony','heretical','hubris','hyperbole','iconoclast','idolatrous','imminent','immutable','impassive','impecunious','imperturbable','impetuous','implacable','impunity','inchoate','incipient','indifferent','inert','infelicitous','ingenuous','inimical','innocuous','insipid','intractable','intransigent','intrepid','inured','inveigle','irascible','laconic','laud','loquacious','lucid','luminous','magnanimity','malevolent','malleable','martial','maverick','mendacity','mercurial','meticulous','misanthrope','mitigate','mollify','morose','mundane','nebulous','neologism','neophyte','noxious','obdurate','obfuscate','obsequious','obstinate','obtuse','obviate','occlude','odious','onerous','opaque','opprobrium','oscillation','ostentatious','paean','parody','pedagogy','pedantic','penurious','penury','perennial','perfidy','perfunctory','pernicious','perspicacious','peruse','pervade','pervasive','phlegmatic','pine','pious','pirate','pith','pithy','placate','platitude','plethora','plummet','polemical','pragmatic','prattle','precipitate','precursor','predilection','preen','prescience','presumptuous','prevaricate','pristine','probity','proclivity','prodigal','prodigious','profligate','profuse','proliferate','prolific','propensity','prosaic','pungent','putrefy','quaff','qualm','querulous','query','quiescence','quixotic','quotidian','rancorous','rarefy','recalcitrant','recant','recondite','redoubtable','refulgent','refute','relegate','renege','repudiate','rescind','reticent','reverent','rhetoric','salubrious','sanction','satire','sedulous','shard','solicitous','solvent','soporific','sordid','sparse','specious','spendthrift','sporadic','spurious','squalid','squander','static','stoic','stupefy','stymie','subpoena','subtle','succinct','superfluous','supplant','surfeit','synthesis','tacit','tenacity','terse','tirade','torpid','torque','tortuous','tout','transient','trenchant','truculent','ubiquitous','unfeigned','untenable','urbane','vacillate','variegated','veracity','vexation','vigilant','vilify','virulent','viscous','vituperate','volatile','voracious','waver','zealous');
+  return a[parseInt(Math.random()* a.length)];
+}
+
+
+</script>
+</head>
+
+<body>
+<h1>Hangman</h1>
+<p id="warning">JavaScript must be enabled to play this game.</p>
+<div id="help"></div>
+<div id="helptext">
+    <h2>How to Play</h2>
+    <div id="close"></div>
+    <p>Hangman is a word-guessing game. Click or tap New Game to display the letters of the alphabet and a row of dashes indicating the number of letters to be guessed. Click or tap a letter. If it's in the word, it replaces the dash(es). Each wrong guess results in a stroke being added to a gallows and its victim. Your role is to guess the word correctly before the victim meets his grisly fate.</p>
+</div>
+<p id="loading">Game loading. . .</p>
+<canvas id="stage" width="200" height="200">Sorry, your browser needs to support canvas for this game.</canvas>
+<div id="play">New Game</div> <div id="clear">Clear Score</div>
+<p id="word"></p>
+<div id="letters"></div>
+
+</html>
+<div>
+
+
+</div>
+
+</body>
+</html>
+

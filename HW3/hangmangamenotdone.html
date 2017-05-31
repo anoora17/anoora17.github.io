@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>MyFirstGame</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+</head>
+
+
+<body>
+<div id="game">
+<span><h1> The Score Board</h1></span>
+
+</div>
+<div id='wordToGuess'>
+	
+</div>
+<div id='numGuesses'></div>
+<div id='winCount'></div>
+<div id='lossCounter'></div>
+<div id='wrongGuesses'></div>
+
+<script type="text/javascript">
+
+var doubleWord= ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o',
+'p','q','r','s','t','u','v','x','y','z'];
+
+ var wordBank= [ 'mercury','venus','earth','marse','jupiter','satrun','uranus','neptine' ];
+var letterInword ="";
+var letterInword=[];
+var numBlanks=0;
+var blanksAndSuccess=[];
+var wrongLetters=[];
+var winCount =0;
+var lossCounter=0;
+var rightGuessCounter=0;
+var guessesLeft=9;
+var chooseWord=wordBank[Math.floor(Math.random()*wordBank.length)];
+
+function reset(){
+	var chooseWord=wordBank[Math.floor(Math.random()*wordBank.length)];
+// split choosen word to letters 
+letterInword =chooseWord.split('');
+
+// get the number og blanks
+
+numBlanks = letterInword.length;
+
+
+
+// REST+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+rightGuessCounter =0;
+guessesLeft =9;
+wrongLetters =[];
+blanksAndSuccess=[];
+doubleWord= ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o',
+'p','q','r','s','t','u','v','x','y','z'];
+
+};
+
+
+
+startGame();
+
+function startGame(){
+
+
+
+// split choosen word to letters 
+letterInword =chooseWord.split('');
+
+// get the number og blanks
+
+numBlanks = letterInword.length;
+
+
+
+// REST+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+rightGuessCounter =0;
+guessesLeft =9;
+wrongLetters =[];
+blanksAndSuccess=[];
+doubleWord= ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o',
+'p','q','r','s','t','u','v','x','y','z'];
+
+// Populate blanks
+
+
+for (i=0;i<numBlanks;i++){
+	blanksAndSuccess.push('___');
+	document.getElementById('wordToGuess').innerHTML=blanksAndSuccess;
+}
+
+// change HTML
+document.getElementById("wordToGuess").innerHTML=blanksAndSuccess.join("");
+document.getElementById("numGuesses").innerHTML=guessesLeft;
+document.getElementById("winCount").innerHTML =winCount;
+document.getElementById("lossCounter").innerHTML =lossCounter;
+document.getElementById("wrongGuesses").innerHTML = wrongLetters; 
+
+
+// testing
+console.log('word  '+chooseWord);
+console.log(' letters  '+letterInword);
+console.log(' numbers '+numBlanks);
+console.log(blanksAndSuccess);
+
+
+
+
+
+function compareLetters(userKey)
+{ 
+	
+	if(chooseWord.indexof(userKey)> -1)
+	    {
+		for (var i=0; i < numBlanks; i++)
+		   {
+			 if(letterInword[i]=== userKey)
+			 {
+				rightGuessCounter ++;
+			    blanksAndSuccess[i]=userKey;
+			    document.getElementById("wordToGuess").innerHTML = blanksAndSuccess.join('');
+		       }
+	       }
+               console.log(blanksAndSuccess);
+          }
+    
+  
+
+  else {
+	wrongLetter.push(userguess);
+	guessesLeft--;
+
+	//change html
+	document.getElementById('numGuesses').innerHTML=guessesLeft;
+	document.getElementById('wrongGuesses').innerHTML=wrongLetter;
+  
+
+		console.log("Wrong Letter = " + wrongLetters);
+		console.log("Guess left are" + guessesLeft);
+		}
+   	}
+   function winLose(){
+
+   	// when numbers of blancks filles with right words then you win
+   	if(rightGuessCounter === numBlanks){
+   		// count wins
+   		winCount++;
+   		document.getElementById('winCounter').innerHTML =winCount;
+   		alert("You win")
+   	}
+   	else if(guessesLeft===0){
+   		lossCounter++;
+   		document.getElementById('lossCounter').innerHTML = lossCounter;
+   		alert('You lost');
+   		resrt();
+
+   	
+   }
+}
+
+}
+startGame();
+ document.onkeyup =function(event){
+ 	var userguess =String.fromCharCode(event.keyCode).toLowerCase();
+           alert(userguess);
+
+
+	 	for(var i=0;i<= doubleWord.length;i++) 
+	 	{     
+         
+           if(userguess === doubleWord[i])
+           {
+	 	     
+	 	      compareLetters(userguess);
+	 	      winLose();
+             }
+                 console.log(userguess);
+             }
+			// var user = "<p> Press any key to start</p>"+"<p>you just enterd:"+userguess+"</p>";
+
+			document.querySelector("#game").innerHTML=userguess;
+
+  }
+
+    	  
+
+
+</script>
+	
+</body>
+</html>
