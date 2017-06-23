@@ -1,0 +1,48 @@
+#buttons-display{
+        background-color: antiquewhite;
+        width:100%;
+        height:auto;
+        overflow: auto;
+        margin: 0 auto;
+        color:black;
+      }
+
+
+      #giffy-form{
+      	float: right;
+      }
+
+      
+
+       button,
+    div,
+    form,
+    input {
+      margin: 10px;
+    }
+
+  div> img {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 30%;
+  border:2px solid black; 
+
+  margin:40px;
+}
+
+    .imge-display{
+      
+      position: relative;
+  
+     }
+      
+
+  button{
+    background:rgb(0,139,139);
+    width:80px;
+    height: 30px;
+    border-radius: 10%;
+    boarder:2em solid black;
+    color:#ffffff;
+  }    
