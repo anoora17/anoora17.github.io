@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- set the width of data-->
+   
+<!-- Latest compiled and minified CSS -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ -->
+<!-- Optional theme -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+ -->
+<!-- Latest compiled and minified JavaScript -->
+<!-- script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+<link rel="stylesheet" type="text/css" href="./css/mycss.css">
+<link rel="stylesheet" type="text/css" href="./script/boot.js">
+
+<link rel="stylesheet" type="text/css" href="./script/bootstrap.min.js">
+
+	<title> Noor Hangman Game</title>
+</head>
+<body>
+
+<p> Click the button to demonstrate the prompt box.</p>
+
+<button onclick="userInput()"> Try it</button>
+
+    <p id="demo"></p>
+
+			<script type="text/javascript">
+				var words=[[y,e,l,l,o,w], [g,r,e,e,n], [b,l,u,e], [r,e,d], [p,u,r,p,u,l,e],[o,r,a,n,g,e]];
+				console.log(words(0))
+
+				var userResponse= [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
+
+				    function userInput() {
+			    var letter = prompt("Please enter any letter");
+			    if (letter != null) {
+			        document.getElementById("demo").innerHTML =
+			        ("-------" +  "" +letter) ;
+			    }
+			}
+			
+		</script>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>MyFirstGame</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<div class="progress"></div>
+
+<style>
+  @keyframes go-left-right {        /* give it a name: "go-left-right" */
+    from { left: 0px; }             /* animate from left: 0px */
+    to { left: calc(100% - 50px); } /* animate to left: 100%-50px */
+  }
+
+  .progress {
+    animation: go-left-right 3s infinite alternate;
+    /* apply the animation "go-left-right" to the element
+       duration 3 seconds
+       number of times: infinite
+       alternate direction every time
+    */
+
+    position: relative;
+    border: 2px solid green;
+    width: 50px;
+    height: 20px;
+    background: lime;
+  }
+</style>
+
+<body>
+<div class="container" >
+<div class="jumbotron" id="jumbo" style="background: #99ccff; text-align:center; color: #b38600" >
+<div  id="game1">
+		<span><h1> Press any Key to start</h1></span>
+
+		
+		</div>
+	</div >
+ <div class="panel-body">
+			<h2 id="Gess">_ _ __ _ __</h2>
+		</div>
+          <div class="panel-heading" >
+          <h3 class="panel-title" ><span>Your Socore Board</span></h3><br>
+          <div class="panel panel-info" id='lifes'>Number of Lifes</div><br>
+			<div id='win'>  Your Wining score </div><br>
+			<div  id='loss'> You loses score 
+                                </div><br>
+			<div  id='wrongGuesses'> Wrong Guess </div>
+		 </div>
+		</div>
+	</div>
+</div>
+ <!-- <img class="train" src="https://js.cx/clipart/train.gif" onclick="this.style.left='450px'">
+ -->
+
+<script type="text/javascript">
+
+
+ var myWord = [ 'mercury','venus','earth','marse','jupiter','satrun','uranus','neptine' ];
+var chossenWord ="";
+var letterInword=[];
+var numofBlanks=0;
+var arrayOfBlanks=[];
+var wrongLetters=[];
+var win=0;
+var loss=0;
+var correctGuess=0;
+var lifes=7;
+
+//an array to check users input as letters only.
+userInputcheck = ['a','b','c','d','e','f','g','h','i',
+					  'j','k','l','m','n','o',
+					  'p','q','r','s','t','u',
+					  'v','w','x',
+					  'y','z'];
+
+ 
+//////// ********* Functions ************
+function game(){
+	alert("game Started");
+ choosenWord = myWord[Math.floor(Math.random() * myWord.length)];
+// split choosen word to letters 
+letterInword =choosenWord.split('');
+
+// get the number og blanks
+numOfBlanks = letterInword.length;
+
+ arrayOfBlanks=[];
+// Blanks loop
+
+for (i=0; i<numOfBlanks;i++){
+	arrayOfBlanks.push('  ___   ');
+	document.getElementById('game1').innerHTML=arrayOfBlanks;
+}
+
+// change HTML
+document.getElementById("game1").innerHTML=arrayOfBlanks.join(' ');;
+document.getElementById("lifes").innerHTML=lifes;
+document.getElementById("win").innerHTML =win;
+document.getElementById("loss").innerHTML =loss;
+document.getElementById("wrongGuesses").innerHTML = wrongLetters; 
+
+
+// test
+console.log('ChossenWords  '+choosenWord);
+console.log(' letters inside each word '+letterInword);
+console.log(' numbers '+numOfBlanks);
+console.log('Blanks'+arrayOfBlanks);
+
+
+}
+
+function compare(userGess){
+     choosenWord = myWord[Math.floor(Math.random() * myWord.length)];
+	
+		for(j=0;j<=numOfBlanks;j++){
+			if(letterInword[j] === userGess){
+				correctGuess++;
+			
+			arrayOfBlanks[j] == userGess;
+			document.getElementById("game").innerHTML=arrayOfBlanks.join(" ");
+  
+	           }
+	          console.log(arrayOfBlanks);
+		      }
+			else {
+
+				wrongLetters.push(userGess);
+							lifes--;
+							//Changes HTML
+							document.getElementById('lifes').innerHTML = lifes;
+							document.getElementById('wrongGuesses').innerHTML = wrongLetters;
+							//Test / Debug
+					 		console.log('Wrong Letters = ' + wrongLetters);
+							console.log('Guesses left are ' + lifes);
+			}
+
+}
+ 
+function winLose()
+{
+	// When number blanks if filled with right words then you win
+	if(correctGuess === numOfBlanks)
+	{
+		//Counts Wins 
+		wint++;
+		//Changes HTML
+		document.getElementById('win').innerHTML = win;
+		alert('You Win');
+		reset();
+	}
+	// When number of Guesses reaches 0 then You lose
+	else if(lifes === 0)
+	{
+		//Counts losses
+		lose++;
+		//Changes HTML
+		document.getElementById('loss').innerHTML = lose;
+		alert('You Lose');
+		
+	}
+
+
+}
+
+// function makeEaseOut(timing) {
+//       return function(timeFraction) {
+//         return 1 - timing(1 - timeFraction);
+//       }
+//     }
+
+//     function bounce(timeFraction) {
+//       for (let a = 0, b = 1, result; 1; a += b, b /= 2) {
+//         if (timeFraction >= (7 - 4 * a) / 11) {
+//           return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+//         }
+//       }
+//     }
+
+    // ball.onclick = function() {
+
+    //   let to = field.clientHeight - ball.clientHeight;
+
+    //   animate({
+    //     duration: 2000,
+    //     timing: makeEaseOut(bounce),
+    //     draw(progress) {
+    //       ball.style.top = to * progress + 'px'
+    //       document.getElementById("ball").innerHTML; 
+    //     }
+    // }
+ game();
+document.onkeyup =function(event){
+    
+ 	 	var userInput =event.key;
+ 	 	alert(userInput)
+
+ 	// for( i=0;i<=letterInword.length;i++){
+ 		compare(userInput);
+ 	    winLose();
+  //    }
+ }
+
+
+
+
+</script>
+	
+</body>
+</html>

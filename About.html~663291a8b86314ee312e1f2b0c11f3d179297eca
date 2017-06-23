@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- set the width of data-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="discription" content="My portfolio">
+  <meta name ="keywards" content=" Resume, CV, prtofolio">
+  <meta name="author" content="Noor Altaweel">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <title>About me</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+</head>
+
+<body>
+ <header>
+  <div class="container">
+    <h1 ><a id="logo" href="./index1.html"> Noor Altaweel</a></h1>
+   <div class="manue">
+  <nav>
+      <ul >
+        <li><a href="./About.html">About</a></li>
+        <li><a href="./Portfolio.html">Portfolio</a></li>
+        <li><a href="./contact.html" >Contact</a></li>
+      </ul>
+</nav>
+</div>
+</div>
+ </header>
+
+
+   <section>
+     <div id="aboutme">
+       <div class="col-wide content-wrap">
+       <h2>About me:</h2>
+       <hr>
+      <p>
+ About.me (Usually styled as about.me) is a ersonal web osting service co-founded by Ryan Freitas, Tony Conrad and Tim Young in October 2009.[1] The site offers registered users a simple platform from which to link multiple online identities, relevant external sites, and popular social networking websites such as Facebook, Flickr, Google+, Pinterest, LinkedIn, Twitter, Tumblr, and YouTube. It is characterized by its one-page user profiles, each with a large, often-artistic background image and abbreviated biography.On December 20, 2010, just four days after its public launch, About.me was acquired by AOL.[2] The company remained at AOL for a little over twenty-five months. On February 5, 2013, it was announced that Conrad had bought back majority control of About.me from AOL; although no specifics were revealed on the purchase price, Conrad did say that it was a fraction of the price AOL paid to originally buy it. Conrad believed that there were no advantages in being owned by AOL, and that the site did not fit with AOL's current business model (which has emphasized online content rather than social networking services). The site returned to becoming a startup, and began another funding round following the announcement.[3]
+        </p>
+       
+ </div>
+ </div>
+ </section>
+
+
+  <aside class"main">
+    <div class="col-narrow">
+      <div class="dark">
+         <h2> Follow me </h2>
+         <hr>
+            <a href="http://www.linkedin.com"><img class="pix"src="./img/linkedin.png"> </a>
+            <a href="http://twitter.com"><img class="pix" src="./img/twittwer.png"></a>
+            <a href="http://github.com"><img class="pix" src="./img/git2.png"></a>
+      </div>
+    </div>
+ </aside>
+ <div class="col-wide">
+ </div>
+ <div class="col-wide">
+ </div>
+ <div class="col-wide">
+ </div>
+ <div class="col-wide">
+ </div>
+<div >
+     <footer>
+       Noor Copyright &copy;
+     </foorter>
+</div>
+
+ </body>
+ </html>
+</body>
+</html>

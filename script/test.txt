@@ -1,0 +1,53 @@
+_________________________________________________
+//bottuns
+_____________________________________________________
+// var correcrCounter=0;
+// var wrong =0;
+
+// //function to displAY THE QUESTIONS
+
+//  function qtn(){
+//     return $('#quest').html(questions.quest[0]));
+//  }
+//   qtn();
+
+//   //FUNCTION TO LOAD AUTOMATICLY FOR BUTTONS
+// $(function(){
+//     var loading = $('#loadbar').show();
+//     $(document)
+//     .ajaxStart(function () {
+//         loading.show();
+//     }).ajaxStop(function () {
+//     	loading.hide();
+//     });
+    
+//     // CHANGE THE LICKED BYTTONS TO DIFFRENT COLOR BY APPLYING CLASS SUCCESS/ 
+//     $(".btn-block").on('click',function () {
+
+//       alert("Hey")
+//        $('.btn').addClass('btn-success');
+//     	var choice = $(this).find('input:radio').val(); // HOLD THE VALUE OF THE CLICKED BUTTON
+//         console.log(choice);
+//     	$('#loadbar').show();
+//     	$('#quiz').fadeOut();
+//     	setTimeout(function(){                           // SET A TIME FOR EAH QUETIONS ( LOOP SHOULD BE IMPLEMNTED)
+//            $( "#answer" ).html($(this).checking(choice) );      
+//             $('#quiz').show();
+//             $('#quest').html(questions.quest[1]);
+//            console.log(questions.quest[1])
+
+//     	}, 1500);
+//     });
+
+//     $ans = 2;
+
+//     $.fn.checking = function(ck) {
+//         if (ck != $ans)
+//             return wrong++;
+//         else 
+//             return correcrCounter++;
+//     }; 
+//         });	
+
+// });
+

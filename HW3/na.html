@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- set the width of data-->
+   
+<!-- Latest compiled and minified CSS -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ -->
+<!-- Optional theme -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+ -->
+<!-- Latest compiled and minified JavaScript -->
+<!-- script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+<link rel="stylesheet" type="text/css" href="./css/mycss.css">
+
+<link rel="stylesheet" type="text/css" href="script/bootstrap.min.js">
+
+	<title> Noor Hangman Game</title>
+</head>
+<body>
+
+<p> Click the button to demonstrate the prompt box.</p>
+
+<button onclick="userInput()"> Try it</button>
+
+    <p id="demo"></p>
+
+    <input type="text" id="input1" />
+<button onclick="myJsFunction()"> submit </button>
+<script type="text/javascript">
+ function myJsFunction(){
+    var text=document.getElementById('input1').value;
+    
+ }
+
+
+</script>
+
+
+    <div id="buttons">
+    </div> 
+
+			<script type="text/javascript">
+				var words=['y','e','l','l','o','w'];
+
+
+				for (i=0; i<words.length; i++){
+          var index = Math.floor(Math.random() * words.length);
+          console.log (index)
+
+        }
+
+				var userResponse= 
+				    function userInput() {
+			    var letter = prompt("Please enter any letter");
+			    if (letter != null) {
+			        document.getElementById("demo").innerHTML =
+			        ("-------" +  "" +letter) ;
+			    }
+			}
+
+      var index = Math.floor(Math.random() * words.length);
+console.log (index)
+			
+
+		// 	window.onload = function () {
+
+  // var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+  //       'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+  //       't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  
+  
+  // // create alphabet ul
+  // var buttons = function () {
+  //   myButtons = document.getElementById('buttons');
+  //   letters = document.createElement('ul');
+
+  //   for (var i = 0; i < alphabet.length; i++) {
+  //     letters.id = 'alphabet';
+  //     list = document.createElement('li');
+  //     list.id = 'letter';
+  //     list.innerHTML = alphabet[i];
+  //     check();
+  //     myButtons.appendChild(letters);
+  //     letters.appendChild(list);
+  //   }
+    
+  // }
+		</script>
+
+</body>
+</html>
